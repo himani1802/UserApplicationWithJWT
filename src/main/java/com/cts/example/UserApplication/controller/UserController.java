@@ -47,6 +47,11 @@ public class UserController {
                         HttpStatus.OK, user));
            }else {
             return new ResponseEntity<String>("User List is empty", HttpStatus.NO_CONTENT);
+
+            //System.out.println("hello");
+
         }
+
     }
+
 }
