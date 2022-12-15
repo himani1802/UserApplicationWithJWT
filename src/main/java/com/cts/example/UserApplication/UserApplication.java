@@ -25,6 +25,9 @@ public class UserApplication {
 	class OpenApiConfig {
 		@Bean
 		public OpenAPI customConfig() {
+
+
+			System.out.println("abcdef");
 			final String securitySchemeName = "bearerAuth";
 			return new OpenAPI().addSecurityItem(new SecurityRequirement()
 							.addList(securitySchemeName))
