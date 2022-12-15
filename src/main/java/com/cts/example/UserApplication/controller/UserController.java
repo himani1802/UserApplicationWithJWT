@@ -39,7 +39,7 @@ public class UserController {
         UserOne user= userService.getUserById(id);
 //        return ResponseEntity.status(HttpStatus.OK).body(userService.getUserById(id));
 //        return ResponseHandler.generateResponse("Successfully fetched user",HttpStatus.OK,user);
-
+//        System.out.println("hello");
         if(user!=null){
             CacheControl cacheControl = CacheControl.maxAge(30, TimeUnit.HOURS);
             return  ResponseEntity.ok().cacheControl(cacheControl)
@@ -47,6 +47,7 @@ public class UserController {
                         HttpStatus.OK, user));
            }else {
             return new ResponseEntity<String>("User List is empty", HttpStatus.NO_CONTENT);
+
         }
     }
 }
